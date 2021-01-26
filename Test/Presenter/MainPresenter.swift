@@ -13,10 +13,12 @@ protocol MainViewProtocol: class {
 
 protocol MainViewPresenterProtocol: class {
     init(view: MainViewProtocol)
+    var model: Person? { get set }
     func showData()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
+    
     let view: MainViewProtocol
     var model: Person?
     

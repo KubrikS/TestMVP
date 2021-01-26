@@ -8,7 +8,7 @@
 import UIKit
 
 class MainView: UIViewController, UITextFieldDelegate {
-    var presenter: MainPresenter!
+    var presenter: MainViewPresenterProtocol!
     
     var nameTextField: UITextField = {
         let textField = UITextField()
@@ -115,6 +115,7 @@ class MainView: UIViewController, UITextFieldDelegate {
                                  age: ageTextField.text ?? "",
                                  sex: sexTextField.text ?? "",
                                  eyeColor: eyeColorTextField.text ?? "")
+
         presenter.showData()
     }
     
